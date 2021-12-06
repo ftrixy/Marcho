@@ -4,6 +4,7 @@ const concat           = require('gulp-concat');
 const autoprefixer     = require('gulp-autoprefixer');
 const uglify           = require('gulp-uglify');
 const del              = require('del');
+const imagemin = require('gulp-imagemin');
 
 const browserSync      = require('browser-sync').create();
 
@@ -29,6 +30,29 @@ function styles() {
         .pipe(dest('app/css'))
         .pipe(browserSync.stream())
 }
+
+// function images() {
+//     return src('app/images/**/*.*')
+//         .pipe(imagemin([
+//             imagemin.gifsicle({ interlaced: true })
+//             imagemin.mozjpeg({ quality: 75, progressive: true })
+//             imagemin.optipng({ optimizationLevel: 5 })
+//             imagemin.svgo({
+//                 plugins: [
+//                     { removeViewBox: true },
+//                     { cleanupIDs: false }
+//                 ]
+//             })
+//         ]))
+//         .pipe(dest('dist/images'))
+// }
+
+function images() {
+    return src('app/images/**/*.*')
+        .pipe(imagemin())
+        .pipe(dest('dist/images'))
+}
+
 
 function scripts() {
     return src([
@@ -66,6 +90,7 @@ exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.cleanDist = cleanDist;
-exports.build = series(cleanDist, build);
+exports.images = images;
+exports.build = series(cleanDist, images, build);
 
 exports.default = parallel(styles, scripts, browsersync, watching);
