@@ -4,7 +4,7 @@ const concat           = require('gulp-concat');
 const autoprefixer     = require('gulp-autoprefixer');
 const uglify           = require('gulp-uglify');
 const del              = require('del');
-const imagemin = require('gulp-imagemin');
+const imagemin         = require('gulp-imagemin');
 
 const browserSync      = require('browser-sync').create();
 
@@ -31,32 +31,16 @@ function styles() {
         .pipe(browserSync.stream())
 }
 
-// function images() {
-//     return src('app/images/**/*.*')
-//         .pipe(imagemin([
-//             imagemin.gifsicle({ interlaced: true })
-//             imagemin.mozjpeg({ quality: 75, progressive: true })
-//             imagemin.optipng({ optimizationLevel: 5 })
-//             imagemin.svgo({
-//                 plugins: [
-//                     { removeViewBox: true },
-//                     { cleanupIDs: false }
-//                 ]
-//             })
-//         ]))
-//         .pipe(dest('dist/images'))
-// }
-
 function images() {
     return src('app/images/**/*.*')
         .pipe(imagemin())
         .pipe(dest('dist/images'))
 }
 
-
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
+        'node_modules/slick-carousel/slick/slick.js',
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))

@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 .header {
@@ -24,18 +25,19 @@
         color: $title;
         padding-bottom: 5px;
         transition: all 0.3s;
-        @extend %quicksand-400;
+        @extend %quicksand-500;
+        &:hover {
+            color: $accent;
+            border-bottom: 1px solid $accent;
+            @extend %quicksand-700;
+        }
     }
-    &__list-link:hover {
-        color: $accent;
-        border-bottom: 1px solid $accent;
-        @extend %quicksand-700;
-    }
-    &__list-link--active {
-        color: $accent;
-        border-bottom: 1px solid $accent;
-        @extend %quicksand-700;
-    }
+}
+
+.menu__list-item .menu__list-link--active {
+    color: $accent;
+    border-bottom: 1px solid $accent;
+    @extend %quicksand-700;
 }
 
 .user-nav {
@@ -138,15 +140,10 @@
         }
     }
     &__form-btn {
-        max-width: 140px;
-        width: 100%;
+        @extend %btn;
         height: 50px;
         border: none;
-        background-color: $accent;
-        color: #fff;
-        text-transform: uppercase;
         cursor: pointer;
-        box-shadow: 0px 7px 20px 0px rgb(255, 17, 48, 0.5);
     }
 }
 
@@ -160,6 +157,81 @@
         vertical-align: middle;
         margin-left: 25px;
         display: inline;
+    }
+}
+
+.top-slider {
+    background-image: url(../images/slider-top-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: $bg;
+    padding: 65px 0 45px 0;
+    &__item {
+        display: flex !important;
+        justify-content: space-between;
+    }
+    &__content {
+        padding: 130px 0 0 160px;
+    }
+    &__title {
+        max-width: 600px;
+        font-size: 58px;
+        line-height: 68px;
+        color: $title;
+        @extend %roboto-700;
+        margin-bottom: 25px;
+    }
+    &__text {
+        max-width: 470px;
+        margin-bottom: 50px;
+    }
+    &__link {
+        @extend %btn;
+        letter-spacing: 2px;
+        padding: 14px 35px;
+    }
+    &__container {
+        max-width: 1520px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: -50px;
+        li {
+            padding: 0 5px;
+            button {
+                padding: 0;
+                font-size: 0;
+                background-color: transparent;
+                width: 30px;
+                height: 30px;
+                border: 1px solid transparent;
+                border-radius: 50%;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background-color: $default;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            &.slick-active {
+                button {
+                    border-color: $accent;
+                    &::before{
+                        background-color: $accent;
+                    }
+                }
+            }
+        }
     }
 }
 
