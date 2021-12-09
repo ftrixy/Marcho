@@ -1,9 +1,7 @@
-
 html,
-body{
+body {
     height: 100%;
 }
-
 
 body {
     font-size: 16px;
@@ -14,7 +12,7 @@ body {
     flex-direction: column;
 }
 
-.main{
+.main {
     flex-grow: 1;
 }
 
@@ -30,4 +28,18 @@ a {
     @extend %quicksand-500;
 }
 
+.title {
+    font-size: 48px;
+    line-height: 26px;
+    text-align: center;
+    @extend %roboto-700;
+    color: $title;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
 
+.text {
+    text-align: center;
+    max-width: 570px;
+    margin: 0 auto 55px;
+}
