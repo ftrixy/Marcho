@@ -698,6 +698,9 @@
     &__error-link:hover{
         color: $accent;
     }
+    &__text{
+        margin-bottom: 25px;
+    }
 }
 
 @import "media";
