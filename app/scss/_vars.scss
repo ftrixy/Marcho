@@ -50,13 +50,15 @@ $bg: #f6f6f6;
     transition: all 0.3s;
 }
 
-%checkbox-hidden {
+%checkbox-hidden,
+%radio-hidden {
     width: 1px;
     height: 1px;
     overflow: hidden;
     clip: rect(0 0 0 0);
     position: absolute;
 }
+
 
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
