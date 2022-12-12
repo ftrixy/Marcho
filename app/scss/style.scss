@@ -126,6 +126,9 @@
     &__text {
         margin-bottom: 25px;
     }
+    &__form{
+        display: flex;
+    }
     &__form-input {
         background-color: #fff;
         max-width: 320px;
@@ -133,6 +136,7 @@
         height: 50px;
         border: none;
         padding: 15px;
+        margin-right: 3px;
         box-shadow: 0px 7px 20px 0px rgb(192, 192, 192, 0.6);
         &::placeholder {
             color: $default;
@@ -1879,6 +1883,108 @@
 #map {
     width: 100%;
     height: 450px;
+}
+
+.contact {
+    padding-bottom: 120px;
+    &__inner {
+        display: flex;
+    }
+    &__info {
+        max-width: 370px;
+        margin-right: 30px;
+    }
+    &__info-title {
+        @extend %roboto-700;
+        font-size: 48px;
+        line-height: 58px;
+        color: $title;
+        margin-bottom: 20px;
+    }
+    &__info-item {
+        color: $title;
+        padding-left: 80px;
+        margin-top: 40px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 60px;
+            left: 0px;
+            top: -5px;
+            box-shadow: 0px 5px 20px 0px rgba(146, 146, 146, 0.3);
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            left: 20px;
+            top: 15px;
+            background-image: url(../images/icons/phone.svg);
+        }
+    }
+    &__info-item--location::after {
+        width: 14px;
+        height: 20px;
+        left: 23px;
+        background-image: url(../images/icons/location.svg);
+    }
+    &__info-item--email::after {
+        width: 18px;
+        height: 20px;
+        left: 21px;
+        background-image: url(../images/icons/email.svg);
+    }
+
+    &__info-phone {
+        color: #292929;
+        display: block;
+    }
+
+    &__form {
+        padding: 55px 40px;
+        width: 100%;
+        box-shadow: 0px 10px 40px 0px rgba(172, 172, 172, 0.3);
+    }
+    &__form-title {
+        @extend %roboto-700;
+        font-size: 22px;
+        line-height: 58px;
+        color: $title;
+        margin-bottom: 30px;
+    }
+    &__form-input {
+        width: 100%;
+        height: 60px;
+        display: block;
+        background-color: $bg;
+        border: none;
+        padding: 15px 20px;
+        margin-bottom: 30px;
+    }
+    &__form-textarea {
+        width: 100%;
+        height: 200px;
+        display: block;
+        resize: none;
+        background-color: $bg;
+        border: none;
+        padding: 15px 20px;
+        margin-bottom: 30px;
+    }
+    &__form-box {
+        display: flex;
+        justify-content: space-between;
+        input {
+            width: 330px;
+        }
+    }
+    &__form-btn {
+        @extend %btn;
+        border: none;
+    }
 }
 
 @import "media";
