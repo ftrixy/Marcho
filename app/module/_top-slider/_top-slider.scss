@@ -72,3 +72,16 @@
         }
     }
 }
+
+@media (max-width: 1200px){
+    .top-slider{
+        &__img{
+            width: 40%;
+            object-fit: contain;
+        }
+        &__content{
+            padding-left: 0;
+            padding-top: 40px;
+        }
+    }
+} 

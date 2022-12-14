@@ -1,5 +1,9 @@
 $(function() {
 
+    $('.menu__btn').on('click', function(){
+        $('.menu__list').toggleClass('menu__list--active');
+    });
+
     $('.blog-page__slider').slick({
         fade: true,
         infinite: false,
