@@ -1801,8 +1801,6 @@
             height: 16px;
         }
     }
-    &____info-link--date {
-    }
     &__info-link--comment::before {
         background-image: url(../images/icons/comment.svg);
         top: 3px;
@@ -1871,6 +1869,11 @@
         color: $title;
         margin-bottom: 20px;
     }
+}
+
+#map {
+  width: 100%;
+  height: 450px;
 }
 
 @import "media";

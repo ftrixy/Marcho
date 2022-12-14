@@ -1,5 +1,8 @@
 $(function() {
 
+
+
+
     $('.blog-page__slider').slick({
         fade: true,
         infinite: false,
@@ -119,4 +122,6 @@ $(function() {
 
     const deadline = $('.promo__clock').attr('data-time');
     initializeClock('promo__clock', deadline);
+
+ 
 });
