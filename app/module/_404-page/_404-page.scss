@@ -1,0 +1,26 @@
+.page-404 {
+    padding: 110px 0 120px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__content {
+        max-width: 570px;
+        width: 100%;
+    }
+    &__title {
+        font-size: 48px;
+        line-height: 26px;
+        @extend %roboto-700;
+        color: #28384f;
+        margin-bottom: 40px;
+    }
+    &__text {
+        margin-bottom: 55px;
+        max-width: 470px;
+    }
+    &__link {
+        @extend %btn;
+    }
+}
