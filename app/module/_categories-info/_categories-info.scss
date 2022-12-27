@@ -91,3 +91,34 @@
         transition: all 0.3s;
     }
 }
+
+@media (max-width: 1200px) {
+    .info {
+        &__item {
+            width: 340px;
+            padding: 20px;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .info {
+        display: block;
+        &__item {
+            min-width: 100%;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        &__item-ico {
+            margin-bottom: 18px;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .info {
+        &__item-title {
+            font-size: 20px;
+        }
+    }
+}
