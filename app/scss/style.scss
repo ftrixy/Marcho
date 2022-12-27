@@ -795,7 +795,7 @@
         }
     }
     &__img {
-        min-width: 770px;
+        max-width: 770px;
         height: 450px;
         object-fit: cover;
         display: block;
@@ -823,14 +823,15 @@
         position: relative;
     }
     &__popup {
-        min-width: 770px;
+        max-width: 770px;
         height: 450px;
         position: relative;
+        background-image: url('../images/content/blog/page-2.jpg');
     }
     &__play {
         position: absolute;
         top: 40%;
-        left: 40%;
+        left: 45%;
     }
     .blog-box {
         justify-content: start;
@@ -980,8 +981,6 @@
             width: 16px;
             height: 16px;
         }
-    }
-    &____info-link--date {
     }
     &__info-link--comment::before {
         background-image: url(../images/icons/comment.svg);

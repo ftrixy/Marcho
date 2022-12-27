@@ -24,3 +24,22 @@
         @extend %btn;
     }
 }
+
+@media (max-width: 1200px) {
+    .page-404{
+        &__img{
+            width: 40%;
+        }
+    }
+}
+
+@media (max-width: 980px) {
+    .page-404{
+        &__img{
+            display: none;
+        }
+        &__title{
+            line-height: 52px;
+        }
+    }
+}

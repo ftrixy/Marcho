@@ -1,0 +1,135 @@
+@media (max-width: 1200px) {
+    .person,
+    .latest-post {
+        display: none;
+    }
+    .blog-page {
+        padding: 60px 0;
+        .filter-category,
+        .filter-tags {
+            display: none;
+        }
+        &__inner {
+            flex-direction: column;
+        }
+        &__content {
+            width: 100%;
+            margin-right: 0;
+        }
+        &__item-box {
+            padding: 20px;
+        }
+        &__img {
+            max-width: 100%;
+            width: 100%;
+        }
+        &__popup {
+            max-width: 100%;
+        }
+        &__play {
+            left: 45%;
+        }
+        &__aside {
+            width: 100%;
+            order: -1;
+        }
+        .filter-search {
+            &__input {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 810px) {
+    .blog-page {
+        &__img {
+            height: 260px;
+        }
+        &__popup {
+            height: 300px;
+        }
+    }
+}
+@media (max-width: 600px) {
+    .blog-page {
+        &__play {
+            left: 38%;
+            top: 32%;
+        }
+        &__item {
+            margin-bottom: 30px;
+        }
+    }
+    .blog-page-one {
+        &__text {
+            padding: 10px;
+        }
+        &__info {
+            display: block;
+        }
+        &__info-item {
+            margin-bottom: 10px;
+        }
+        &__box {
+            display: block;
+            padding: 0 10px;
+        }
+        &__tags {
+            margin-bottom: 10px;
+        }
+        .comments-form {
+            padding: 0;
+            &__box-input {
+                display: block;
+                margin-bottom: 0;
+            }
+            &__text-input {
+                margin-bottom: 30px;
+                margin-left: 0 !important;
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 400px) {
+    .blog-page {
+        &__play {
+            left: 33%;
+            top: 35%;
+        }
+        &__slider {
+            .slick-next {
+                right: 5px;
+            }
+            .slick-prev {
+                left: 5px;
+            }
+        }
+    }
+    .filter-search {
+        &__input {
+            &::placeholder {
+                font-size: 12px;
+            }
+        }
+    }
+    .filter__item {
+        padding: 15px 20px;
+    }
+    .blog-page-one {
+        &__text {
+            blockquote {
+                padding: 20px;
+            }
+        }
+        &__author-img {
+            display: none;
+        }
+        .comments {
+            &__img {
+                display: none;
+            }
+        }
+    }
+}

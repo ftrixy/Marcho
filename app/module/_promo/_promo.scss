@@ -52,3 +52,38 @@
         line-height: 20px;
     }
 }
+
+@media (max-width: 570px) {
+    .promo {
+        padding: 60px 0;
+        &__clock {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__clock-item {
+            margin: 20px 33px;
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .promo {
+        padding: 60px 0;
+        &__text{
+            font-size: 15px;
+        }
+        &__clock {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__clock-item {
+            margin: 10px 25px;
+            width: 80px;
+            height: 80px;
+        }
+        &__clock-item span {
+            font-size: 30px;
+            margin: 0;
+        }
+    }
+}
